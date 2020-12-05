@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-md-8 form-group">    
+        <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+<button type="button" class="btn btn-info" (click)="Upload()" >Upload</button>    
+       
+      </div> 
+     
+      <div>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile number</th>
+              <th>Password</th>
+            </tr>
+            <tr>
+              <td>{{this.name }}</td>
+              <td>{{this.email}}</td>
+              <td>{{this.mobileNumber}}</td>
+              <td>{{this.password}}</td>
+            </tr>
+          </table>
+      </div>
+      <div>
+        <h1> current date</h1>
+        <p class="field" >
+            {{ currentDate | date : 'fullDate'}}
+        </p>
+        <button (click)="date()">click for date</button>
+    </div>
+</body>
+</html>
